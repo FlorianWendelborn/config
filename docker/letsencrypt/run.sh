@@ -9,7 +9,7 @@ docker run \
 	-v "/srv/docker/letsencrypt/storage:/etc/letsencrypt" \
 	-v "/srv/docker/letsencrypt/lib:/var/lib/letsencrypt" \
 	-v "/srv/docker/nginx/root:/usr/share/webroot" \
-	letsencrypt:latest \
+	dodekeract/letsencrypt \
 		--webroot-path "/usr/share/webroot" \
 		-c "/config.ini" \
 		-d dodekeract.com \
@@ -27,7 +27,7 @@ docker run \
 	-v "/srv/docker/letsencrypt/storage:/etc/letsencrypt" \
 	-v "/srv/docker/letsencrypt/lib:/var/lib/letsencrypt" \
 	-v "/srv/docker/nginx/root:/usr/share/webroot" \
-	letsencrypt:latest \
+	dodekeract/letsencrypt \
 		--webroot-path "/usr/share/webroot" \
 		-c "/config.ini" \
 		-d smartfl.at \
@@ -44,7 +44,7 @@ docker run \
 	-v "/srv/docker/letsencrypt/storage:/etc/letsencrypt" \
 	-v "/srv/docker/letsencrypt/lib:/var/lib/letsencrypt" \
 	-v "/srv/docker/nginx/root:/usr/share/webroot" \
-	letsencrypt:latest \
+	dodekeract/letsencrypt \
 		--webroot-path "/usr/share/webroot" \
 		-c "/config.ini" \
 		-d impequid.com \
@@ -60,7 +60,7 @@ docker run \
 	-v "/srv/docker/letsencrypt/storage:/etc/letsencrypt" \
 	-v "/srv/docker/letsencrypt/lib:/var/lib/letsencrypt" \
 	-v "/srv/docker/nginx/root:/usr/share/webroot" \
-	letsencrypt:latest \
+	dodekeract/letsencrypt \
 		--webroot-path "/usr/share/webroot" \
 		-c "/config.ini" \
 		-d iotfl.at \
@@ -75,7 +75,7 @@ docker run \
 	-v "/srv/docker/letsencrypt/storage:/etc/letsencrypt" \
 	-v "/srv/docker/letsencrypt/lib:/var/lib/letsencrypt" \
 	-v "/srv/docker/nginx/root:/usr/share/webroot" \
-	letsencrypt:latest \
+	dodekeract/letsencrypt \
 		--webroot-path "/usr/share/webroot" \
 		-c "/config.ini" \
 		-d dodekeract.report \
@@ -94,7 +94,7 @@ docker run \
 	-v "/srv/docker/letsencrypt/storage:/etc/letsencrypt" \
 	-v "/srv/docker/letsencrypt/lib:/var/lib/letsencrypt" \
 	-v "/srv/docker/nginx/root:/usr/share/webroot" \
-	letsencrypt:latest \
+	dodekeract/letsencrypt \
 		--webroot-path "/usr/share/webroot" \
 		-c "/config.ini" \
 		-d reportmy.team \

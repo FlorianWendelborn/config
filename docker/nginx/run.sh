@@ -7,5 +7,5 @@ docker run --name nginx \
 	-v /srv/docker/nginx/config:/etc/nginx:ro \
 	-v /srv/docker/nginx/logs:/var/log/nginx \
 	-v /srv/docker/nginx/root:/usr/share/nginx/html:ro \
-	-v /srv/docker/letsencrypt/storage/live:/etc/letsencrypt/live:ro \
+	-v /srv/docker/letsencrypt/storage:/etc/letsencrypt:ro \
 	nginx

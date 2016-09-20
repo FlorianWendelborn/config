@@ -1,7 +1,7 @@
 # directories
 
 mkdir -p /srv/docker/nginx/logs
-mkdir -p /srv/docker/nginx/root
+mkdir -p /srv/docker/nginx/config/authentication
 mkdir -p /srv/docker/nginx/root/.well-known
 mkdir -p /srv/docker/nginx/config/sites-enabled
 

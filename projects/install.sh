@@ -10,7 +10,7 @@ mkdir -p $TARGET
 # clone
 
 function clone () {
-	git clone https://github.com/dodekeract/$1 || (pushd $1 && git pull && popd)
+	(git clone https://github.com/dodekeract/$1 &> /dev/null) || (pushd $1 && git pull && popd)
 }
 
 # go
@@ -37,7 +37,7 @@ popd
 # copy nginx config
 
 cp ./nginx.conf $SITES/projects.dodekeract.com
-cp ./nginx.conf $SITES/projects-legacy
+cp ./legacy.conf $SITES/projects-legacy
 
 # reload nginx
 

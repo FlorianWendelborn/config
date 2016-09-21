@@ -103,6 +103,6 @@ docker run \
 			-d please.reportmy.team \
 		certonly
 
-# restart nginx
+# reload nginx
 
-docker restart nginx
+docker exec -it nginx nginx -s reload

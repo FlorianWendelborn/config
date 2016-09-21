@@ -10,6 +10,6 @@ docker run \
 		-c "/config.ini" \
 		renew
 
-# restart nginx
+# reload nginx
 
-docker restart nginx
+docker exec -it nginx nginx -s reload

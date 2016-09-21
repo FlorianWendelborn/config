@@ -10,7 +10,7 @@ mkdir -p $TARGET
 # clone
 
 function clone () {
-	git clone https://github.com/dodekeract/$1 || pushd $1 && git pull && popd
+	git clone https://github.com/dodekeract/$1 || (pushd $1 && git pull && popd)
 }
 
 # go

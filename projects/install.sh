@@ -5,7 +5,7 @@ SITES="/srv/docker/nginx/config/sites-enabled"
 
 # create folder
 
-mkdir -p $TARGET
+mkdir -p "$TARGET"
 
 # clone
 
@@ -15,11 +15,13 @@ function clone () {
 
 # go
 
-pushd $TARGET
+pushd "$TARGET"
 
+	clone line-replace-fractals
 	clone mandelbrot
 	clone particles
-	clone line-replace-fractals
+	clone sierpinski
+	clone some-old-stuff
 	clone spirograph
 	clone spot-the-difference
 
@@ -36,8 +38,8 @@ popd
 
 # copy nginx config
 
-cp ./nginx.conf $SITES/projects.dodekeract.com
-cp ./legacy.conf $SITES/projects-legacy
+cp ./nginx.conf "$SITES/projects.dodekeract.com"
+cp ./legacy.conf "$SITES/projects-legacy"
 
 # reload nginx
 

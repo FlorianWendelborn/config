@@ -31,6 +31,7 @@ pushd "$TARGET"
 	pushd manta-config-engine-app
 		npm install
 		npm run build
+		rm -r ../manta
 		mv build ../manta
 	popd
 

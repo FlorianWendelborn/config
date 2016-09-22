@@ -103,6 +103,23 @@ docker run \
 			-d please.reportmy.team \
 		certonly
 
+# hacker.digital
+
+docker run \
+	--rm \
+	--name letsencrypt \
+	-v "/srv/docker/letsencrypt/logs:/var/log/letsencrypt" \
+	-v "/srv/docker/letsencrypt/storage:/etc/letsencrypt" \
+	-v "/srv/docker/letsencrypt/lib:/var/lib/letsencrypt" \
+	-v "/srv/docker/nginx/root:/usr/share/webroot" \
+	dodekeract/letsencrypt \
+		--webroot-path "/usr/share/webroot" \
+		-c "/config.ini" \
+		-d hacker.digital \
+			-d dustincompetent.hacker.digital \
+			-d dinc.hacker.digital \
+		certonly
+
 # reload nginx
 
 docker exec -it nginx nginx -s reload

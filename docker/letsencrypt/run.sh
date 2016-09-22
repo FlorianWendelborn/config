@@ -13,6 +13,7 @@ docker run \
 		--webroot-path "/usr/share/webroot" \
 		-c "/config.ini" \
 		-d dodekeract.com \
+			-d deploy.dodekeract.com \
 			-d public.dodekeract.com \
 			-d link.dodekeract.com \
 			-d projects.dodekeract.com \

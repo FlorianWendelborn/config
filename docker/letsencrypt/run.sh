@@ -19,6 +19,8 @@ docker run \
 			-d projects.dodekeract.com \
 			-d server.dodekeract.com \
 			-d ip.dodekeract.com \
+			-d ip4.dodekeract.com \
+			-d ip6.dodekeract.com \
 		certonly
 
 # smartfl.at

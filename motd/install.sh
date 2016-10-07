@@ -11,5 +11,6 @@ fi
 
 # copy new motd
 
+rm -r "$MOTD"
 cp -r ./scripts "$MOTD"
-mv "$MOTD/custom.sh $MOTD/00-custom"
+mv "$MOTD/custom.sh" "$MOTD/00-custom"

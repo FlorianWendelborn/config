@@ -1,5 +1,7 @@
+export MACHINE_TYPE="server"
+
 export ZSH=/opt/oh-my-zsh
-ZSH_THEME="dodekeract"
+ZSH_THEME="server"
 HYPHEN_INSENSITIVE="true"
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"

@@ -1,14 +1,21 @@
 #!/bin/bash
 
-OH_MY_ZSH="/opt/oh-my-zsh"
+if [ -z ${MACHINE_TYPE+x} ]; then
+	echo "NO MACHINE_TYPE SET"
+	exit 1
+fi
+
+if [ -z ${ZSH_CUSTOM+x} ]; then
+	echo "NO ZSH_CUSTOM SET"
+	exit 1
+fi
 
 # zshrc
 
-cp .zshrc ~/.zshrc
-chown dodekeract:dodekeract .zshrc
+cp "rc/$MACHINE_TYPE.zshrc" ~/.zshrc
+chown dodekeract:dodekeract ~/.zshrc || chown dodekeract:staff ~/.zshrc
 
 # theme
 
-cp dodekeract.zsh-theme "$OH_MY_ZSH/themes/dodekeract.zsh-theme"
-
-chown root:root "$OH_MY_ZSH/themes/dodekeract.zsh-theme"
+cp -r themes $ZSH_CUSTOM/
+chown -R root:root $ZSH_CUSTOM/ || chown -R root:staff $ZSH_CUSTOM/

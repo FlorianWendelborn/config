@@ -21,6 +21,5 @@ printf "          IP: $IP\n"
 printf "Distribution: $DISTRIBUTION\n"
 printf "      Uptime: $UPTIME\n"
 printf "        Time: $TIME\n"
-
 printf "\n"
 printf "$DOCKER"

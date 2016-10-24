@@ -42,6 +42,10 @@ popd
 cp ./nginx.conf "$SITES/projects.dodekeract.com"
 cp ./legacy.conf "$SITES/projects-legacy"
 
+# copy favicons
+
+cp ./favicons/projects.ico "$TARGET/favicon.ico"
+
 # reload nginx
 
 docker exec -it nginx nginx -s reload

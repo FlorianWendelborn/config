@@ -23,6 +23,21 @@ docker run \
 			-d ip6.dodekeract.com \
 		certonly
 
+# mail.dodekeract.com
+
+docker run \
+	--rm \
+	--name letsencrypt \
+	-v "/srv/docker/letsencrypt/logs:/var/log/letsencrypt" \
+	-v "/srv/docker/letsencrypt/storage:/etc/letsencrypt" \
+	-v "/srv/docker/letsencrypt/lib:/var/lib/letsencrypt" \
+	-v "/srv/docker/nginx/root:/usr/share/webroot" \
+	dodekeract/letsencrypt \
+		--webroot-path "/usr/share/webroot" \
+		-c "/config.ini" \
+		-d mail.dodekeract.com \
+		certonly
+
 # smartfl.at
 
 docker run \

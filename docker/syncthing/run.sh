@@ -3,7 +3,8 @@
 # docker
 
 docker run \
-	--name=syncthing
+	-d \
+	--name=syncthing \
 	-v /srv/docker/syncthing/config:/config \
 	-v /srv/docker/syncthing/data:/data \
 	-e PGID=$GID -e PUID=$UID \

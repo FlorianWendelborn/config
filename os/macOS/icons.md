@@ -2,3 +2,4 @@
 - [Slack](https://github.com/schaefer-dev/icons/blob/master/Slack.icns)
 - [Firefox](https://github.com/schaefer-dev/icons/blob/master/Firefox.icns)
 - [Atom](https://github.com/schaefer-dev/icons/blob/master/Black%20Atom.icns)
+- [Spotify](https://github.com/schaefer-dev/icons/blob/master/spotify%205.icns)

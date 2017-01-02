@@ -3,3 +3,5 @@
 - [Firefox](https://github.com/schaefer-dev/icons/blob/master/Firefox.icns)
 - [Atom](https://github.com/schaefer-dev/icons/blob/master/Black%20Atom.icns)
 - [Spotify](https://github.com/schaefer-dev/icons/blob/master/spotify%205.icns)
+- [iTerm](https://github.com/schaefer-dev/icons/blob/master/iTerm2.icns)
+- [TeamSpeak](https://github.com/schaefer-dev/icons/blob/master/teamspeak-icon.icns)

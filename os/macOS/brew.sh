@@ -7,3 +7,7 @@ brew install gnu-prolog
 brew cask install disablemonitor
 brew cask install paw
 brew cask install tower
+brew cask install spotify
+brew cask install atom
+brew cask install iterm2
+brew cask install colorsnapper

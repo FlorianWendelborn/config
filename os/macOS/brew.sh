@@ -11,3 +11,4 @@ brew cask install spotify
 brew cask install atom
 brew cask install iterm2
 brew cask install colorsnapper
+brew cask install aerial

@@ -17,5 +17,13 @@ services:
       - /srv/docker/mail/data/:/var/mail
       - /srv/docker/mail/config/:/tmp/docker-mailserver/
       - /srv/docker/letsencrypt/storage:/etc/letsencrypt
+      - /srv/docker/mail/state/:/var/mail-state
     environment:
       - SSL_TYPE=letsencrypt
+      - ENABLE_SPAMASSASSIN=1
+      - ENABLE_CLAMAV=1
+      - ENABLE_FAIL2BAN=1
+      - ONE_DIR=1
+      - DMS_DEBUG=0
+    cap_add:
+      - NET_ADMIN

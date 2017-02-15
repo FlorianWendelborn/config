@@ -14,3 +14,4 @@ brew cask install colorsnapper
 brew cask install aerial
 brew cask install teamspeak-client
 brew cask install steam
+brew cask install gitify

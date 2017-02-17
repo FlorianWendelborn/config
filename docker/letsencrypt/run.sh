@@ -53,6 +53,7 @@ docker run \
 		-d smartfl.at \
 			-d dns.smartfl.at \
 			-d festival.smartfl.at \
+			-d slack.smartfl.at \
 		certonly
 
 # impequid.com

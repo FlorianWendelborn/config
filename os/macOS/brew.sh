@@ -3,7 +3,6 @@
 brew cask install syncthing-bar
 brew cask install teamviewer
 brew cask install google-chrome-canary
-brew install gnu-prolog
 brew cask install disablemonitor
 brew cask install paw
 brew cask install tower
@@ -14,3 +13,4 @@ brew cask install colorsnapper
 brew cask install aerial
 brew cask install teamspeak-client
 brew cask install steam
+brew cask install gitify

@@ -14,3 +14,5 @@ brew cask install aerial
 brew cask install teamspeak-client
 brew cask install steam
 brew cask install gitify
+brew cask install unetbootin
+brew cask install cakebrew

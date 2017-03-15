@@ -1,5 +1,6 @@
 #!/bin/sh
 
+brew install ctop
 brew cask install syncthing-bar
 brew cask install teamviewer
 brew cask install google-chrome-canary

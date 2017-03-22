@@ -1,4 +1,4 @@
-# Server
+# Config
 
 An awful lot of more or less random node/shell scripts I use on my devices.
 

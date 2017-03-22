@@ -1,5 +1,7 @@
 #!/bin/bash
 echo "generating configs"
+mkdir themes
+mkdir rc
 node generate
 
 ZSH_CUSTOM="/opt/oh-my-zsh/custom"

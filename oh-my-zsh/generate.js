@@ -98,7 +98,7 @@ const ssh = name => Object
 	.filter(id => id !== name)
 	.map(name => {
 		const {shortName, ssh: {host, port, user}} = systems[name]
-		return `alias s${shortName}="ssh -p ${port} ${user}@${host}"`
+		return `alias s${shortName}="ssh -4 -p ${port} ${user}@${host}"`
 	})
 	.join('\n')
 // endregion

@@ -6,7 +6,8 @@ This generates & installs a customized `.zshrc` and `.zsh-theme` depending on `$
 
 ## Dependencies
 
-[Oh-my-zsh](https://ohmyz.sh) must be installed in `/opt/Oh-my-zsh`.
+1. [Node.js](https://nodejs.org)
+2. [Oh-my-zsh](https://ohmyz.sh) must be installed in `/opt/oh-my-zsh`.
 
 ## Installation
 

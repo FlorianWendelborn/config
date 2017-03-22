@@ -1,4 +1,4 @@
-# auto-generated zsh-theme
+# auto-generated .zsh-theme
 
 local ret_status="%(?::%{$fg_bold[red]%}x )"
 

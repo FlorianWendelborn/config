@@ -20,13 +20,13 @@ alias ta="tmuxinator start attach"
 alias yw="yarn run watch"
 
 # machine
-export MACHINE_NAME="university"
-export ZSH_THEME="university"
+export MACHINE_NAME="crusade"
+export ZSH_THEME="crusade"
 
 # ssh
 alias sg="ssh -p 23 dodekeract@dodekeract.smartfl.at"
-alias sc="ssh -p 22 dodekeract@server.dodekeract.com"
 alias ss="ssh -p 22 pi@dodekeract.smartfl.at"
+alias su="ssh -p 22 fwendelborn@gruenau.informatik.hu-berlin.de"
 
 # oh-my-zsh
 source $ZSH/oh-my-zsh.sh

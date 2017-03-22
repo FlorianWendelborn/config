@@ -1,21 +1,23 @@
 #!/bin/bash
+echo "generating configs"
+node generate
 
-if [ -z ${MACHINE_TYPE+x} ]; then
-	echo "NO MACHINE_TYPE SET"
-	exit 1
-fi
+ZSH_CUSTOM="/opt/oh-my-zsh/custom"
 
-if [ -z ${ZSH_CUSTOM+x} ]; then
-	echo "NO ZSH_CUSTOM SET"
-	exit 1
-fi
+echo "select one of these as \$MACHINE_TYPE (without .zshrc):"
+ls ./rc
+read -p "Machine type?" MACHINE_TYPE
+read -p "user:group for ~/.zshrc?" USER_GROUP
 
-# zshrc
-
-cp "rc/$MACHINE_TYPE.zshrc" ~/.zshrc
-chown dodekeract:dodekeract ~/.zshrc || chown dodekeract:staff ~/.zshrc
+[ -f "./rc/$MACHINE_TYPE.zshrc" ] || exit 1
 
 # theme
+sudo cp -r themes "$ZSH_CUSTOM/"
+sudo chown -R root:root "$ZSH_CUSTOM/" || sudo chown -R root:staff "$ZSH_CUSTOM/"
 
-cp -r themes $ZSH_CUSTOM/
-chown -R root:root $ZSH_CUSTOM/ || chown -R root:staff $ZSH_CUSTOM/
+# zshrc
+cp "rc/$MACHINE_TYPE.zshrc" ~/.zshrc
+sudo chown "$USER_GROUP" ~/.zshrc
+
+echo "Done!"
+exit 0

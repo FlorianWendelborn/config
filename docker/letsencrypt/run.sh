@@ -21,6 +21,7 @@ docker run \
 			-d ip.dodekeract.com \
 			-d ip4.dodekeract.com \
 			-d ip6.dodekeract.com \
+			-d slack.dodekeract.com \
 		certonly
 
 # mail.dodekeract.com

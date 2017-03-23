@@ -1,5 +1,5 @@
 {
-	"group": "dodekeract",
+	"group": "pi",
 	"ip": {
 		"local": "192.168.0.111",
 		"remote": false
@@ -13,5 +13,5 @@
 	"theme": {
 		"color": "magenta"
 	},
-	"user": "dodekeract"
+	"user": "pi"
 }

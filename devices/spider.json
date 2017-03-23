@@ -4,6 +4,10 @@
 		"local": "192.168.0.111",
 		"remote": false
 	},
+	"root": {
+		"group": "root",
+		"user": "root"
+	},
 	"shortName": "s",
 	"ssh": {
 		"host": "dodekeract.smartfl.at",

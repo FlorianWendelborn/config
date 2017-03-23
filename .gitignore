@@ -1,3 +1,5 @@
 .DS_Store
-/oh-my-zsh/rc
-/oh-my-zsh/themes
+/node_modules/
+/generate/*.zsh-theme
+/generate/*.zshrc
+/generate/*.motd

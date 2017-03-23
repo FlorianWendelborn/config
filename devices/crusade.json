@@ -1,0 +1,22 @@
+{
+	"commands": {
+		"distribution": "$(lsb_release -s -d) $(uname -r) $(uname -m)"
+	},
+	"group": "dodekeract",
+	"hasDocker": true,
+	"hostname": "Crusade",
+	"ip": {
+		"local": false,
+		"remote": "5.9.151.243"
+	},
+	"shortName": "c",
+	"ssh": {
+		"host": "server.dodekeract.com",
+		"port": 22,
+		"user": "dodekeract"
+	},
+	"theme": {
+		"color": "yellow"
+	},
+	"user": "dodekeract"
+}

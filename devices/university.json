@@ -1,0 +1,15 @@
+{
+	"ip": {
+		"local": false,
+		"remote": false
+	},
+	"shortName": "u",
+	"ssh": {
+		"host": "gruenau.informatik.hu-berlin.de",
+		"port": 22,
+		"user": "fwendelborn"
+	},
+	"theme": {
+		"color": "green"
+	}
+}

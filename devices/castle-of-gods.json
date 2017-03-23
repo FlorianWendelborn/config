@@ -1,0 +1,21 @@
+{
+	"group": "staff",
+	"ip": {
+		"local": "192.168.0.100",
+		"remote": false
+	},
+	"root": {
+		"group": "staff",
+		"user": "root"
+	},
+	"shortName": "g",
+	"ssh": {
+		"host": "dodekeract.smartfl.at",
+		"port": 23,
+		"user": "dodekeract"
+	},
+	"theme": {
+		"color": "cyan"
+	},
+	"user": "dodekeract"
+}

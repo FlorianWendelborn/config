@@ -1,6 +1,23 @@
 # Config
 
-An awful lot of more or less random node/shell scripts I use on my devices.
+> An awful lot of more or less random node/shell scripts I use on my devices.
+
+This generates & installs a customized `.motd`, `.zshrc` and `.zsh-theme`.
+
+![screenshot](/screenshot.png)
+
+## Dependencies
+
+1. [Node.js](https://nodejs.org)
+2. [Yarn](https://yarnpkg.com)
+3. [Oh-my-zsh](https://ohmyz.sh) must be installed in `/opt/oh-my-zsh`.
+
+## Installation
+
+```shell
+yarn install
+sudo node install
+```
 
 ## Devices
 

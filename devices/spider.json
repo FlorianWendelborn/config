@@ -1,0 +1,17 @@
+{
+	"group": "dodekeract",
+	"ip": {
+		"local": "192.168.0.111",
+		"remote": false
+	},
+	"shortName": "s",
+	"ssh": {
+		"host": "dodekeract.smartfl.at",
+		"port": 22,
+		"user": "pi"
+	},
+	"theme": {
+		"color": "magenta"
+	},
+	"user": "dodekeract"
+}

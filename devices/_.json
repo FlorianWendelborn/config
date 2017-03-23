@@ -1,0 +1,24 @@
+{
+	"aliases": {
+		"c": "cd ~/code",
+		"ca": "cd ~/code/attach",
+		"dps": "docker ps -a",
+		"ip4": "curl https://ip4.dodekeract.com",
+		"sz": "source ~/.zshrc",
+		"t": "tmux a -t 0",
+		"ta": "tmuxinator start attach",
+		"yw": "yarn run watch"
+	},
+	"environment": {
+		"EDITOR": "vi",
+		"HYPHEN_INSENSITIVE": "true",
+		"LANG": "en_US.UTF-8",
+		"LC_ALL": "en_US.UTF-8",
+		"PATH": "usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games",
+		"ZSH": "/opt/oh-my-zsh",
+		"ZSH_CUSTOM": "/opt/oh-my-zsh/custom"
+	},
+	"folders": [
+		"~/Code"
+	]
+}

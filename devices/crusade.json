@@ -5,7 +5,7 @@
 	"group": "dodekeract",
 	"hasDocker": true,
 	"hasMotd": true,
-	"hostname": "Crusade",
+	"fullName": "Crusade",
 	"ip": {
 		"remote": "5.9.151.243"
 	},

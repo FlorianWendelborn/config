@@ -1,8 +1,5 @@
 {
-	"ip": {
-		"local": false,
-		"remote": false
-	},
+	"ip": {},
 	"shortName": "u",
 	"ssh": {
 		"host": "gruenau.informatik.hu-berlin.de",

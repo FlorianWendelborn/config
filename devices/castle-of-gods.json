@@ -1,8 +1,7 @@
 {
 	"group": "staff",
 	"ip": {
-		"local": "192.168.0.100",
-		"remote": false
+		"local": "192.168.0.100"
 	},
 	"root": {
 		"group": "staff",

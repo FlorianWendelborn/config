@@ -4,9 +4,9 @@
 	},
 	"group": "dodekeract",
 	"hasDocker": true,
+	"hasMotd": true,
 	"hostname": "Crusade",
 	"ip": {
-		"local": false,
 		"remote": "5.9.151.243"
 	},
 	"shortName": "c",

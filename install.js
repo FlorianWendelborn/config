@@ -32,11 +32,11 @@ const deviceList = fs
 
 	// #region generate
 	if (info.hasMotd) {
-		console.log('todo motd')
-		// fs.writeFileSync('/etc/motd', generateMotd(info))
-		// child
-		// 	.execSync(`chown ${info.root.user}:${info.root.group} /etc/motd`)
-		// 	.toString().trim()
+		const dir = '/etc/update-motd.d/00-custom'
+		fs.writeFileSync(dir, generateMotd(info))
+		child
+			.execSync(`chown ${info.root.user}:${info.root.group} ${dir}`)
+			.toString().trim()
 	}
 
 	fs.writeFileSync(`${os.homedir()}/.zshrc`, generateRc(name))

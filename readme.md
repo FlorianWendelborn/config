@@ -25,7 +25,7 @@ All my devices are named after [Aleksander Vinter (Savant)](https://en.wikipedia
 
 |           Name | Device                                    |
 |---------------:|:------------------------------------------|
-|       Annunaki | iPhone 7 Plus 128GB Black                 |
+|       Anunnaki | iPhone 7 Plus 128GB Black                 |
 | Castle Of Gods | Hackintosh, i7-6700K, GTX 780, 32GB DDR4  |
 |        Crusade | Dedicated Root Server, i7-3700, 16GB DDR3 |
 |       Nazareth | Apple TV 4 64GB                           |

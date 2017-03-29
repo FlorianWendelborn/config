@@ -29,7 +29,7 @@
 					"test-api.attach.live": "http://192.168.0.100:2400",
 					"test-assets.attach.live": "http://192.168.0.100:1025",
 					"test-legal.attach.live": "http://192.168.0.100:9988",
-					"test-video.attach.live": "http://192.168.0.100:1025"
+					"test-video.attach.live": "http://192.168.0.100:1717"
 				}
 			},
 			{

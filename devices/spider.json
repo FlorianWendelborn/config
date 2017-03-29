@@ -1,5 +1,53 @@
 {
 	"group": "pi",
+	"http": {
+		"sites": "/etc/nginx/sites-enabled/generated.conf",
+		"proxy": [{
+			"certificate": {
+				"private": "/etc/letsencrypt/live/dodekeract.smartfl.at/privkey.pem",
+				"public": "/etc/letsencrypt/live/dodekeract.smartfl.at/fullchain.pem"
+			},
+			"map": {
+				"dev.impequid.com": "http://192.168.0.100:40000",
+				"dev.smartfl.at": "http://192.168.0.100:40000",
+				"dodekeract.smartfl.at": "http://192.168.0.100:8080"
+			}
+		}, {
+			"authentication": {
+				"allow": [
+					"CORS"
+				],
+				"location": "/etc/nginx/attach.passwords",
+				"type": "basic"
+			},
+			"certificate": {
+				"private": "/etc/ssl/private/attach.live.key",
+				"public": "/etc/ssl/private/attach.live.cert"
+			},
+			"map": {
+				"test-api.attach.live": "http://192.168.0.100:2400",
+				"test-assets.attach.live": "http://192.168.0.100:1025",
+				"test-legal.attach.live": "http://192.168.0.100:9988",
+				"test-video.attach.live": "http://192.168.0.100:1025"
+			}
+		}, {
+			"authentication": {
+				"location": "/etc/nginx/attach.passwords",
+				"type": "basic"
+			},
+			"certificate": {
+				"private": "/etc/ssl/private/attach.live.key",
+				"public": "/etc/ssl/private/attach.live.cert"
+			},
+			"map": {
+				"test-branding-example.attach.live": "http://192.168.0.100:3637",
+				"test-developer.attach.live": "http://192.168.0.100:6052",
+				"test-icon.attach.live": "http://192.168.0.100:9555",
+				"test-showcase.attach.live": "http://192.168.0.100:3636",
+				"test-www.attach.live": "http://192.168.0.100:5012"
+			}
+		}]
+	},
 	"ip": {
 		"local": "192.168.0.111"
 	},

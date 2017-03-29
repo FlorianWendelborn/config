@@ -6,6 +6,7 @@ const os = require('os')
 
 // internal
 const _ = require('./devices/_')
+const generateHttp = require('./generate/http')
 const generateMotd = require('./generate/motd')
 const generateRc = require('./generate/rc')
 const generateTheme = require('./generate/theme')
@@ -31,18 +32,22 @@ const deviceList = fs
 	// #endregion
 
 	// #region generate
+	if (info.http) {
+		const file = info.http.sites
+		fs.writeFileSync(file, generateHttp(info.http))
+		child.execSync(`chown ${info.root.user}:${info.root.group} ${file}`)
+	}
+
 	if (info.hasMotd) {
 		const dir = '/etc/update-motd.d/00-custom'
 		fs.writeFileSync(dir, generateMotd(info))
-		child
-			.execSync(`chown ${info.root.user}:${info.root.group} ${dir}`)
-			.toString().trim()
+		child.execSync(`chown ${info.root.user}:${info.root.group} ${dir}`)
 	}
 
 	fs.writeFileSync(`${os.homedir()}/.zshrc`, generateRc(name))
-	fs.writeFileSync('/opt/oh-my-zsh/custom/themes/dodekeract.zsh-theme', generateTheme(info))
-
 	child.execSync(`chown ${info.user}:${info.group} ${os.homedir()}/.zshrc`)
+
+	fs.writeFileSync('/opt/oh-my-zsh/custom/themes/dodekeract.zsh-theme', generateTheme(info))
 	child.execSync(`chown ${info.root.user}:${info.root.group} /opt/oh-my-zsh/custom/themes/dodekeract.zsh-theme`)
 	// #endregion
 

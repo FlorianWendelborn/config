@@ -12,6 +12,8 @@ module.exports = ({proxy}) => proxy
 	.join('\n\n')
 
 const create = ({authentication, certificate, target}) => `server {
+	server_name ${domain};
+
 	listen 443 ssl;
 	listen [::]:443 ssl;
 

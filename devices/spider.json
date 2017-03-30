@@ -79,7 +79,13 @@
 		"user": "pi"
 	},
 	"theme": {
-		"color": "magenta"
+		"color": "magenta",
+		"complementary": "black",
+		"highlight": "yellow",
+		"neutral": "white"
+	},
+	"tmux": {
+		"prefix": "s"
 	},
 	"user": "pi"
 }

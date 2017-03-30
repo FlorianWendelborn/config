@@ -2,12 +2,16 @@
 	"commands": {
 		"distribution": "$(lsb_release -s -d) $(uname -r) $(uname -m)"
 	},
+	"fullName": "Crusade",
 	"group": "dodekeract",
 	"hasDocker": true,
 	"hasMotd": true,
-	"fullName": "Crusade",
 	"ip": {
 		"remote": "5.9.151.243"
+	},
+	"root": {
+		"group": "root",
+		"user": "root"
 	},
 	"shortName": "c",
 	"ssh": {
@@ -15,12 +19,14 @@
 		"port": 22,
 		"user": "dodekeract"
 	},
-	"root": {
-		"group": "root",
-		"user": "root"
-	},
 	"theme": {
-		"color": "yellow"
+		"color": "yellow",
+		"complementary": "black",
+		"highlight": "red",
+		"neutral": "white"
+	},
+	"tmux": {
+		"prefix": "b"
 	},
 	"user": "dodekeract"
 }

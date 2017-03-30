@@ -4,6 +4,15 @@
 		"proxy": [
 			{
 				"certificate": {
+					"private": "/etc/ssl/private/attach.live.key",
+					"public": "/etc/ssl/private/attach.live.cert"
+				},
+				"map": {
+					"test-api.attach.live": "http://192.168.0.100:2400"
+				}
+			},
+			{
+				"certificate": {
 					"private": "/etc/letsencrypt/live/dodekeract.smartfl.at/privkey.pem",
 					"public": "/etc/letsencrypt/live/dodekeract.smartfl.at/fullchain.pem"
 				},
@@ -26,7 +35,6 @@
 					"public": "/etc/ssl/private/attach.live.cert"
 				},
 				"map": {
-					"test-api.attach.live": "http://192.168.0.100:2400",
 					"test-assets.attach.live": "http://192.168.0.100:1025",
 					"test-legal.attach.live": "http://192.168.0.100:9988",
 					"test-video.attach.live": "http://192.168.0.100:1717"

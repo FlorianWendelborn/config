@@ -1,13 +1,10 @@
 module.exports = ({theme, tmux}) => `# auto-generated tmux.conf
 
-# options: automatically create session
+# options
 new-session -A -s 0
-
-# options: enable-mouse
 set -g mouse on
-
-# options: no-tab-rename
 set-option -g allow-rename off
+set-option -g renumber-windows on
 
 # keys: prefix
 set -g prefix C-${tmux.prefix}

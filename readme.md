@@ -2,7 +2,7 @@
 
 > An awful lot of more or less random node/shell scripts I use on my devices.
 
-This generates & installs a customized `.motd`, `.zshrc` and `.zsh-theme`.
+This generates & installs a customized `tmux.conf`, `nginx.confg`, `.motd`, `.zshrc` and `.zsh-theme`.
 
 ![screenshot](/screenshot.png)
 
@@ -21,7 +21,7 @@ sudo node install
 
 ## Devices
 
-All my devices are named after [Aleksander Vinter (Savant)](https://en.wikipedia.org/wiki/Savant_(musician))'s Album [Zion](https://savantofficial.bandcamp.com/album/zion)
+All my devices are named after [Aleksander Vinter (Savant)](https://en.wikipedia.org/wiki/Savant_(musician))'s Album [Zion](https://savantofficial.bandcamp.com/album/zion).
 
 |           Name | Device                                    |
 |---------------:|:------------------------------------------|

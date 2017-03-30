@@ -19,3 +19,6 @@ brew cask install tower
 brew cask install unetbootin
 brew install ctop
 brew install m-cli
+
+# https://github.com/sindresorhus/quick-look-plugins
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package quicklookase qlvideo

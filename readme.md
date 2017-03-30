@@ -2,7 +2,7 @@
 
 > An awful lot of more or less random node/shell scripts I use on my devices.
 
-This generates & installs a customized `tmux.conf`, `nginx.confg`, `.motd`, `.zshrc` and `.zsh-theme`.
+This generates & installs a customized `tmux.conf`, `nginx.conf`, `.motd`, `.zshrc` and `.zsh-theme`.
 
 ![screenshot](/screenshot.png)
 

@@ -85,7 +85,7 @@
 		"neutral": "white"
 	},
 	"tmux": {
-		"prefix": "s"
+		"prefix": "p"
 	},
 	"user": "pi"
 }

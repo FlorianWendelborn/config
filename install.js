@@ -10,6 +10,7 @@ const generateHttp = require('./generate/http')
 const generateMotd = require('./generate/motd')
 const generateRc = require('./generate/rc')
 const generateTheme = require('./generate/theme')
+const generateTmux = require('./generate/tmux')
 // endregion
 
 // region ssh
@@ -41,7 +42,13 @@ const deviceList = fs
 	if (info.hasMotd) {
 		const dir = '/etc/update-motd.d/00-custom'
 		fs.writeFileSync(dir, generateMotd(info))
-		child.execSync(`chown ${info.root.user}:${info.root.group} ${dir}`)
+		child.execSync(`chown -R ${info.root.user}:${info.root.group} ${dir}`)
+	}
+
+	if (info.tmux) {
+		const file = `/etc/tmux.conf`
+		fs.writeFileSync(file, generateTmux(info))
+		child.execSync(`chown ${info.root.user}:${info.root.group} ${file}`)
 	}
 
 	fs.writeFileSync(`${os.homedir()}/.zshrc`, generateRc(name))

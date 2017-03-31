@@ -57,7 +57,7 @@
 					"test-icon.attach.live": "http://192.168.0.100:9555",
 					"test-link": "http://192.168.0.100:9700",
 					"test-news-starter.attach.live": "http://192.168.0.100:3640",
-					"test-showcase.attach.live": "http://192.168.0.100:3636",
+					"test-showroom.attach.live": "http://192.168.0.100:3636",
 					"test-social-starter.attach.live": "http://192.168.0.100:3641",
 					"test-www.attach.live": "http://192.168.0.100:5012"
 				}

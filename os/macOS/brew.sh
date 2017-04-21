@@ -9,7 +9,9 @@ brew cask install disk-inventory-x
 brew cask install gitify
 brew cask install google-chrome-canary
 brew cask install iterm2
+brew cask install opera
 brew cask install paw
+brew cask install safari-technology-preview
 brew cask install spotify
 brew cask install steam
 brew cask install syncthing-bar

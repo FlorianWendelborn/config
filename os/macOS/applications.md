@@ -3,3 +3,10 @@
 - Affinity Photo
 - Fantastical
 - Pastebot
+- Alfred
+- Fluid
+- Beamer
+- Numi
+- SteerMouse
+- Bartender 2
+- Parallels

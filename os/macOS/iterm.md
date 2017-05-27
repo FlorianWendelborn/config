@@ -1,0 +1,1 @@
+- [Seti Color Scheme](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/Seti.itermcolors)

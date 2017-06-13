@@ -23,43 +23,58 @@ const deviceList = fs
 // region dialog
 ;(async () => {
 	// #region gather information
-	const {name} = await inquirer.prompt([{
-		type: 'list',
-		name: 'name',
-		message: 'Which system is this?',
-		choices: deviceList
-	}])
+	const { name } = await inquirer.prompt([
+		{
+			type: 'list',
+			name: 'name',
+			message: 'Which system is this?',
+			choices: deviceList
+		}
+	])
 	const info = require(`${__dirname}/devices/${name}`)
 	// #endregion
 
 	// #region generate
+	// http
 	if (info.http) {
 		const file = info.http.sites
 		fs.writeFileSync(file, generateHttp(info.http))
 		child.execSync(`chown ${info.root.user}:${info.root.group} ${file}`)
 	}
 
+	// motd
 	if (info.hasMotd) {
 		const dir = '/etc/update-motd.d/00-custom'
 		fs.writeFileSync(dir, generateMotd(info))
 		child.execSync(`chown -R ${info.root.user}:${info.root.group} ${dir}`)
 	}
 
+	// tmux
 	if (info.tmux) {
-		const file = `/etc/tmux.conf`
-		fs.writeFileSync(file, generateTmux(info))
-		child.execSync(`chown ${info.root.user}:${info.root.group} ${file}`)
+		fs.writeFileSync(info.tmux.output, generateTmux(info))
+		child.execSync(
+			`chown ${info.root.user}:${info.root.group} ${info.tmux.output}`
+		)
 	}
 
+	// zsh
 	fs.writeFileSync(`${os.homedir()}/.zshrc`, generateRc(name))
 	child.execSync(`chown ${info.user}:${info.group} ${os.homedir()}/.zshrc`)
 
-	fs.writeFileSync('/opt/oh-my-zsh/custom/themes/dodekeract.zsh-theme', generateTheme(info))
-	child.execSync(`chown ${info.root.user}:${info.root.group} /opt/oh-my-zsh/custom/themes/dodekeract.zsh-theme`)
+	fs.writeFileSync(
+		'/opt/oh-my-zsh/custom/themes/dodekeract.zsh-theme',
+		generateTheme(info)
+	)
+	child.execSync(
+		`chown ${info.root.user}:${info.root
+			.group} /opt/oh-my-zsh/custom/themes/dodekeract.zsh-theme`
+	)
 	// #endregion
 
 	// #region create folders
-	_.folders.forEach(folder => child.execSync(`mkdir -p ${folder.replace('~', os.homedir())}`))
+	_.folders.forEach(folder =>
+		child.execSync(`mkdir -p ${folder.replace('~', os.homedir())}`)
+	)
 	// #endregion
 })()
 // endregion

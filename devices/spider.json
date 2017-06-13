@@ -86,6 +86,7 @@
 		"neutral": "white"
 	},
 	"tmux": {
+		"output": "/etc/tmux.conf",
 		"prefix": "p"
 	},
 	"user": "pi"

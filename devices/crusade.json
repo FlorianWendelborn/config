@@ -26,6 +26,7 @@
 		"neutral": "white"
 	},
 	"tmux": {
+		"output": "/etc/tmux.conf",
 		"prefix": "b"
 	},
 	"user": "dodekeract"

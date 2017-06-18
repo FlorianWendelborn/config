@@ -1,0 +1,16 @@
+version: '3.2'
+services:
+  battleboy-minecraft:
+    container_name: battleboy-minecraft
+    image: itzg/minecraft-server
+    restart: unless-stopped
+    ports:
+    - "5555:25565"
+    volumes:
+    - type: volume
+      source: /docker/battleboy/minecraft
+      target: /data
+    environment:
+    - EULA=true
+    stdin_open: true
+    tty: true

@@ -1,0 +1,16 @@
+version: '3.2'
+services:
+  minecraft:
+    container_name: minecraft
+    image: itzg/minecraft-server
+    restart: unless-stopped
+    ports:
+    - "25565:25565"
+    volumes:
+    - type: volume
+      source: /docker/minecraft
+      target: /data
+    environment:
+    - EULA=true
+    stdin_open: true
+    tty: true

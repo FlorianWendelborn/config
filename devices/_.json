@@ -14,7 +14,7 @@
 		"HYPHEN_INSENSITIVE": "true",
 		"LANG": "en_US.UTF-8",
 		"LC_ALL": "en_US.UTF-8",
-		"PATH": "usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games",
+		"PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games",
 		"ZSH": "/opt/oh-my-zsh",
 		"ZSH_CUSTOM": "/opt/oh-my-zsh/custom"
 	},

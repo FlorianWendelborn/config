@@ -54,7 +54,7 @@
 					"test-branding-example.attach.live": "http://192.168.0.100:3637",
 					"test-chat-starter.attach.live": "http://192.168.0.100:3638",
 					"test-collaboration-starter.attach.live": "http://192.168.0.100:3639",
-					"test-components": "http://192.168.0.100:5983",
+					"dodekeract-components.attach.live": "http://192.168.0.100:5983",
 					"test-developer.attach.live": "http://192.168.0.100:6052",
 					"test-link": "http://192.168.0.100:9700",
 					"test-news-starter.attach.live": "http://192.168.0.100:3640",

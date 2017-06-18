@@ -1,0 +1,24 @@
+version: "3.2"
+services:
+  syncthing:
+    container_name: syncthing
+    image: linuxserver/syncthing
+    restart: unless-stopped
+    ports:
+    - "8384:8384"
+    - "22000:22000"
+    - "21027:21027/udp"
+    volumes:
+    - type: volume
+      source: /docker/syncthing/config
+      target: /config
+    - type: volume
+      source: /docker/syncthing/data
+      target: /data
+    - type: volume
+      source: /docker/mail/data
+      target: /data-mail
+      read_only: true
+    environment:
+    - PGID=0
+    - PUID=0

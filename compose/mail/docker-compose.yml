@@ -1,9 +1,8 @@
-version: '2'
+version: '3.2'
 
 services:
   mail:
     image: tvial/docker-mailserver:latest
-    # build: .
     hostname: mail
     domainname: dodekeract.com
     container_name: mail
@@ -14,10 +13,10 @@ services:
       - "993:993"
       - "10024:10024"
     volumes:
-      - /srv/docker/mail/data/:/var/mail
-      - /srv/docker/mail/config/:/tmp/docker-mailserver/
-      - /srv/docker/letsencrypt/storage:/etc/letsencrypt
-      - /srv/docker/mail/state/:/var/mail-state
+      - /docker/mail/data/:/var/mail
+      - /docker/mail/config/:/tmp/docker-mailserver
+      - /docker/letsencrypt/storage:/etc/letsencrypt
+      - /docker/mail/state/:/var/mail-state
     environment:
       - SSL_TYPE=letsencrypt
       - ENABLE_SPAMASSASSIN=1

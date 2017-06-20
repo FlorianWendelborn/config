@@ -1,0 +1,28 @@
+{
+	"fullName": "Desert Eagle",
+	"group": "staff",
+	"ip": {
+		"local": "192.168.0.200"
+	},
+	"root": {
+		"group": "staff",
+		"user": "root"
+	},
+	"shortName": "d",
+	"ssh": {
+		"host": "dodekeract.smartfl.at",
+		"port": 24,
+		"user": "dodekeract"
+	},
+	"theme": {
+		"color": "white",
+		"complementary": "black",
+		"highlight": "blue",
+		"neutral": "gray"
+	},
+	"tmux": {
+		"output": "/usr/local/etc/tmux.conf",
+		"prefix": "d"
+	},
+	"user": "dodekeract"
+}

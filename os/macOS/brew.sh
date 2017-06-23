@@ -1,5 +1,6 @@
 #!/bin/sh
 
+brew cask install bartender
 # brew cask install aerial
 brew cask install atom
 # brew cask install cakebrew

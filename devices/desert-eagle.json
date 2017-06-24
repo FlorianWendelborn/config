@@ -22,7 +22,7 @@
 	},
 	"tmux": {
 		"output": "/usr/local/etc/tmux.conf",
-		"prefix": "d"
+		"prefix": "s"
 	},
 	"user": "dodekeract"
 }

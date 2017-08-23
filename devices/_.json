@@ -7,9 +7,11 @@
 		"sz": "source ~/.zshrc",
 		"t": "tmux a -t 0",
 		"ta": "tmuxinator start attach",
+		"tsa": "tmuxinator stop attach",
 		"yw": "yarn run watch"
 	},
 	"environment": {
+		"ATTACH_PREFIX": "dodekeract-",
 		"EDITOR": "vi",
 		"HYPHEN_INSENSITIVE": "true",
 		"LANG": "en_US.UTF-8",
@@ -18,7 +20,5 @@
 		"ZSH": "/opt/oh-my-zsh",
 		"ZSH_CUSTOM": "/opt/oh-my-zsh/custom"
 	},
-	"folders": [
-		"~/Code"
-	]
+	"folders": ["~/Code"]
 }

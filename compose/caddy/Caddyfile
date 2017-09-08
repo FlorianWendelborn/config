@@ -1,3 +1,7 @@
+mail.dodekeract.com {
+	root /srv/com.dodekeract.mail
+}
+
 public.dodekeract.com {
 	browse
 	root /srv/com.dodekeract.public

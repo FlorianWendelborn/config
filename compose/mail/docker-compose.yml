@@ -13,12 +13,14 @@ services:
       - "993:993"
       - "10024:10024"
     volumes:
-      - /docker/mail/data/:/var/mail
-      - /docker/mail/config/:/tmp/docker-mailserver
-      - /docker/letsencrypt/storage:/etc/letsencrypt
-      - /docker/mail/state/:/var/mail-state
+      - /docker/mail/data:/var/mail
+      - /docker/mail/config:/tmp/docker-mailserver
+      - /docker/ssl:/tmp/ssl:ro
+      - /docker/mail/state:/var/mail-state
     environment:
-      - SSL_TYPE=letsencrypt
+      - SSL_TYPE=manual
+      - SSL_CERT_PATH=/tmp/ssl/mail.dodekeract.com.pem
+      - SSL_KEY_PATH=/tmp/ssl/mail.dodekeract.com.key
       - ENABLE_SPAMASSASSIN=1
       - ENABLE_CLAMAV=1
       - ENABLE_FAIL2BAN=1

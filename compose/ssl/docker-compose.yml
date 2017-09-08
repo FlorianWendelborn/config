@@ -1,0 +1,16 @@
+version: '3.2'
+
+services:
+  mail:
+    restart: always
+    image: henridwyer/docker-letsencrypt-cron:latest
+    container_name: ssl
+    volumes:
+      - /docker/ssl:/certs
+      - /docker/caddy/static/com.dodekeract.mail:/srv
+    environment:
+      - DOMAINS=mail.dodekeract.com
+      - EMAIL=florianwendgithub@gmail.com
+      - CONCAT=false
+      - SEPARATE=true
+      - WEBROOT=/srv

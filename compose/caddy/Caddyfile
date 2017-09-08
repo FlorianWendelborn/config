@@ -61,6 +61,10 @@ dns.smartfl.at {
 	}
 }
 
+slack.smartfl.at {
+	proxy / 127.0.0.1:55000
+}
+
 impequid.com {
 	proxy / 127.0.0.1:50000
 }
@@ -74,7 +78,11 @@ festival.smartfl.at {
 }
 
 dodekeract.com {
-	proxy / 127.0.0.1:45000
+	redir https://www.dodekeract.com
+}
+
+www.dodekeract.com {
+	root /srv/com.dodekeract.www
 }
 
 slack.dodekeract.com {

@@ -1,8 +1,8 @@
 # Mac App Store Applications
 - Affinity Designer
 - Affinity Photo
+- Bartender 3
 - Fantastical
-- Pastebot
 - Numi
-- Bartender 2
 - Parallels
+- Pastebot

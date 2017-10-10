@@ -13,7 +13,6 @@ defaults write com.apple.Dock size-immutable -bool TRUE
 defaults write com.apple.Dock contents-immutable -bool TRUE
 
 # other
-defaults write com.apple.Dock showhidden -bool TRUE
 defaults write com.apple.dock mineffect -string suck
 
 # restart

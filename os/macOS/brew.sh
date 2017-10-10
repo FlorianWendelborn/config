@@ -22,7 +22,6 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch 
 
 ## other
 brew install ctop
-brew cask install bartender
 brew cask install disk-inventory-x
 brew cask install teamspeak-client
 brew cask install teamviewer

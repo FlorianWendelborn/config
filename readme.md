@@ -26,10 +26,11 @@ All my devices are named after [Aleksander Vinter (Savant)](https://en.wikipedia
 |           Name | Device                                                        |
 |---------------:|:--------------------------------------------------------------|
 |       Anunnaki | iPhone 7 Plus 128GB Black                                     |
-| Castle Of Gods | Hackintosh, i7-6700K, GTX 780, 32GB DDR4                      |
+| Castle of Gods | Hackintosh, i7-6700K, GTX 780, 32GB DDR4                      |
 |        Crusade | Dedicated Root Server, i7-3700, 16GB DDR3                     |
 |   Desert Eagle | 15" MacBook Pro, i7-7920HQ, 2TB SSD, 16GB RAM, Radeon Pro 560 |
 |       Nazareth | Apple TV 4 64GB                                               |
 |       Royality | Bose QuietComfort 35                                          |
+|  Sons of Babel | AirPods.                                                      |
 |         Spider | Raspberry Pi 3 Model B                                        |
 |           Zion | iPad Pro 12.9" Wi-Fi + Cellular 128GB                         |

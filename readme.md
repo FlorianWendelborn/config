@@ -31,6 +31,6 @@ All my devices are named after [Aleksander Vinter (Savant)](https://en.wikipedia
 |   Desert Eagle | 15" MacBook Pro, i7-7920HQ, 2TB SSD, 16GB RAM, Radeon Pro 560 |
 |       Nazareth | Apple TV 4 64GB                                               |
 |       Royality | Bose QuietComfort 35                                          |
-|  Sons of Babel | AirPods.                                                      |
+|  Sons of Babel | AirPods                                                       |
 |         Spider | Raspberry Pi 3 Model B                                        |
 |           Zion | iPad Pro 12.9" Wi-Fi + Cellular 128GB                         |

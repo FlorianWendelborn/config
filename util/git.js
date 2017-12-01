@@ -4,7 +4,7 @@ const os = require('os')
 
 const run = async () => {
 	// gather information
-	const { userName, repositoryName } = await inquirer.prompt([
+	const { repositoryName, shortName, userName } = await inquirer.prompt([
 		{
 			type: 'input',
 			name: 'userName',
@@ -17,9 +17,17 @@ const run = async () => {
 			message: 'Repository Name?',
 			default: '',
 		},
+		{
+			type: 'input',
+			name: 'shortName',
+			message: 'Short name?',
+			default: '',
+		},
 	])
 
-	const outputDirectory = `${os.homedir()}/Code/@${userName}/${repositoryName}`
+	const name = shortName || repositoryName
+
+	const outputDirectory = `${os.homedir()}/Code/@${userName}/${name}`
 	const atomProjectsDirectory = `${os.homedir()}/.atom/projects`
 
 	// clone
@@ -28,9 +36,12 @@ const run = async () => {
 	)
 
 	// link
-	child.execSync(
-		`ln -s ${outputDirectory} ${atomProjectsDirectory}/@${userName}:${repositoryName}`
-	)
+	const linkLocation = `${atomProjectsDirectory}/@${userName}:${name}`
+	child.execSync(`rm -f ${linkLocation}`)
+	child.execSync(`ln -s ${outputDirectory} ${linkLocation}`)
+
+	// install
+	child.execSync(`cd ${outputDirectory}; yarn install`)
 
 	// tower
 	child.execSync(`gittower ${outputDirectory}`)

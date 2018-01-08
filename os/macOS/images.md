@@ -3,5 +3,5 @@
 ## Re-claim Space
 
 ```sh
-hdiutil compact ~/Documents/Encrypted/Example.sparsebundle
+hdiutil compact ~/Documents/Encrypted/Example.sparsebundle -batteryallowed
 ```

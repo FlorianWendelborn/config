@@ -1,22 +1,23 @@
 {
 	"aliases": {
-		"c": "cd ~/code",
-		"ca": "cd ~/code/attach",
+		"c": "cd ~/Code",
+		"c3": "cd ~/Code/3yourmind",
 		"dps": "docker ps -a",
 		"ip4": "curl https://ip4.dodekeract.com",
 		"sz": "source ~/.zshrc",
 		"t": "tmux a -t 0",
-		"ta": "tmuxinator start attach",
-		"tsa": "tmuxinator stop attach",
+		"t3": "tmuxinator start 3yourmind",
+		"ts3": "tmuxinator stop 3yourmind",
+		"yd": "yarn run dev",
 		"yw": "yarn run watch"
 	},
 	"environment": {
-		"ATTACH_PREFIX": "dodekeract-",
 		"EDITOR": "vi",
 		"HYPHEN_INSENSITIVE": "true",
 		"LANG": "en_US.UTF-8",
 		"LC_ALL": "en_US.UTF-8",
-		"PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games",
+		"PATH":
+			"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/Library/Frameworks/Python.framework/Versions/3.6/bin",
 		"ZSH": "/opt/oh-my-zsh",
 		"ZSH_CUSTOM": "/opt/oh-my-zsh/custom"
 	},

@@ -2,14 +2,28 @@ const child = require('child_process')
 const inquirer = require('inquirer')
 const os = require('os')
 
+const DEFAULT_USERNAMES = {
+	'github.com': 'dodekeract',
+	'bitbucket.org': '3yourmind',
+}
+
 const run = async () => {
 	// gather information
+	const { host } = await inquirer.prompt([
+		{
+			type: 'list',
+			name: 'host',
+			message: 'Host?',
+			choices: ['github.com', 'bitbucket.org'],
+		},
+	])
+
 	const { repositoryName, shortName, userName } = await inquirer.prompt([
 		{
 			type: 'input',
 			name: 'userName',
-			message: 'GitHub User Name?',
-			default: 'dodekeract',
+			message: 'User Name?',
+			default: DEFAULT_USERNAMES[host],
 		},
 		{
 			type: 'input',
@@ -32,7 +46,7 @@ const run = async () => {
 
 	// clone
 	child.execSync(
-		`git clone git@github.com:${userName}/${repositoryName} ${outputDirectory}`
+		`git clone git@${host}:${userName}/${repositoryName} ${outputDirectory}`
 	)
 
 	// link

@@ -4,15 +4,6 @@
 		"proxy": [
 			{
 				"certificate": {
-					"private": "/etc/ssl/private/attach.live.key",
-					"public": "/etc/ssl/private/attach.live.cert"
-				},
-				"map": {
-					"test-api.attach.live": "http://192.168.0.100:2400"
-				}
-			},
-			{
-				"certificate": {
 					"private": "/etc/letsencrypt/live/dodekeract.smartfl.at/privkey.pem",
 					"public": "/etc/letsencrypt/live/dodekeract.smartfl.at/fullchain.pem"
 				},
@@ -20,48 +11,6 @@
 					"dev.impequid.com": "http://192.168.0.100:40000",
 					"dev.smartfl.at": "http://192.168.0.100:40000",
 					"dodekeract.smartfl.at": "http://192.168.0.100"
-				}
-			},
-			{
-				"authentication": {
-					"allow": [
-						"CORS"
-					],
-					"location": "/etc/nginx/attach.passwords",
-					"type": "basic"
-				},
-				"certificate": {
-					"private": "/etc/ssl/private/attach.live.key",
-					"public": "/etc/ssl/private/attach.live.cert"
-				},
-				"map": {
-					"test-assets.attach.live": "http://192.168.0.100:1025",
-					"test-legal.attach.live": "http://192.168.0.100:9988",
-					"test-video.attach.live": "http://192.168.0.100:1717"
-				}
-			},
-			{
-				"authentication": {
-					"location": "/etc/nginx/attach.passwords",
-					"type": "basic"
-				},
-				"certificate": {
-					"private": "/etc/ssl/private/attach.live.key",
-					"public": "/etc/ssl/private/attach.live.cert"
-				},
-				"map": {
-					"test-account.attach.live": "http://192.168.0.100:5456",
-					"test-branding-example.attach.live": "http://192.168.0.100:3637",
-					"test-chat-starter.attach.live": "http://192.168.0.100:3638",
-					"test-collaboration-starter.attach.live": "http://192.168.0.100:3639",
-					"dodekeract-components.attach.live": "http://192.168.0.100:5983",
-					"test-developer.attach.live": "http://192.168.0.100:6052",
-					"test-link": "http://192.168.0.100:9700",
-					"test-news-starter.attach.live": "http://192.168.0.100:3640",
-					"test-scan.attach.live": "http://192.168.0.100:9555",
-					"test-showroom.attach.live": "http://192.168.0.100:3636",
-					"test-social-starter.attach.live": "http://192.168.0.100:3641",
-					"test-www.attach.live": "http://192.168.0.100:5012"
 				}
 			}
 		],

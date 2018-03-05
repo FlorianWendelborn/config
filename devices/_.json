@@ -2,6 +2,8 @@
 	"aliases": {
 		"c": "cd ~/Code",
 		"c3": "cd ~/Code/3yourmind",
+		"docker-nuke":
+			"docker rm -f \\$(docker ps -a -q) && docker rmi -f \\$(docker images -q)",
 		"dps": "docker ps -a",
 		"ip4": "curl https://ip4.dodekeract.com",
 		"sz": "source ~/.zshrc",
@@ -9,6 +11,7 @@
 		"t3": "tmuxinator start 3yourmind",
 		"ts3": "tmuxinator stop 3yourmind",
 		"yd": "yarn run dev",
+		"yr": "yarn run",
 		"yw": "yarn run watch"
 	},
 	"environment": {

@@ -23,16 +23,18 @@ sudo node install
 
 All my devices are named after [Aleksander Vinter (Savant)](https://en.wikipedia.org/wiki/Savant_(musician))'s Album [Zion](https://savantofficial.bandcamp.com/album/zion).
 
-|           Name | Device                                                        |
-|---------------:|:--------------------------------------------------------------|
-|   ~~Anunnaki~~ | ~~iPhone 7 Plus 128GB Black~~                                 |
-| Castle of Gods | Hackintosh, i7-6700K, GTX 780, 32GB DDR4                      |
-|        Crusade | Dedicated Root Server, i7-3700, 16GB DDR3                     |
-|   Desert Eagle | 15" MacBook Pro, i7-7920HQ, 2TB SSD, 16GB RAM, Radeon Pro 560 |
-|       Nazareth | Apple TV 4 64GB                                               |
-|       Outcasts | Dedicated Root Server, Xeon E3-1246V3, 32GB DDR3, 2x240GB SSD |
-|       Royality | Bose QuietComfort 35                                          |
-|         Shazam | iPhone X 256 GB Silver                                        |
-|  Sons of Babel | AirPods                                                       |
-|         Spider | Raspberry Pi 3 Model B                                        |
-|           Zion | iPad Pro 12.9" Wi-Fi + Cellular 128GB                         |
+|             Name | Device                                                        |
+|-----------------:|:--------------------------------------------------------------|
+|     ~~Anunnaki~~ | ~~iPhone 7 Plus 128GB Black~~                                 |
+|   Castle of Gods | Hackintosh, i7-6700K, GTX 780, 32GB DDR4                      |
+|          Crusade | Dedicated Root Server, i7-3700, 16GB DDR3                     |
+|     Desert Eagle | 15" MacBook Pro, i7-7920HQ, 2TB SSD, 16GB RAM, Radeon Pro 560 |
+|            Mecca | Space Gray Magic Mouse 2                                      |
+|         Nazareth | Apple TV 4 64GB                                               |
+|         Outcasts | Dedicated Root Server, Xeon E3-1246V3, 32GB DDR3, 2x240GB SSD |
+| Princess of Zion | Space Gray Magic Trackpad 2                                   |
+|         Royality | Bose QuietComfort 35                                          |
+|           Shazam | iPhone X 256 GB Silver                                        |
+|    Sons of Babel | AirPods                                                       |
+|           Spider | Raspberry Pi 3 Model B                                        |
+|             Zion | iPad Pro 12.9" Wi-Fi + Cellular 128GB                         |

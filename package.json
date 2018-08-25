@@ -1,29 +1,29 @@
 {
-  "name": "config",
-  "version": "0.0.0",
-  "description": "Dodekeract's Dotfiless",
-  "main": "generate/install.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dodekeract/config.git"
-  },
-  "keywords": [
-    "config",
-    "dotfiles",
-    "dodekeract",
-    "zsh",
-    "oh-my-zsh"
-  ],
-  "author": "Florian Wendelborn",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dodekeract/config/issues"
-  },
-  "homepage": "https://github.com/dodekeract/config#readme",
-  "dependencies": {
-    "inquirer": "^3.0.6"
-  }
+	"author": "Florian Wendelborn",
+	"bugs": {
+		"url": "https://github.com/dodekeract/config/issues"
+	},
+	"dependencies": {
+		"inquirer": "^3.0.6"
+	},
+	"description": "Dodekeract's Dotfiless",
+	"homepage": "https://github.com/dodekeract/config#readme",
+	"keywords": [
+		"config",
+		"dotfiles",
+		"dodekeract",
+		"zsh",
+		"oh-my-zsh"
+	],
+	"license": "MIT",
+	"main": "generate/install.js",
+	"name": "config",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dodekeract/config.git"
+	},
+	"scripts": {
+		"test": "mocha"
+	},
+	"version": "0.0.0"
 }

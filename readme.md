@@ -14,7 +14,7 @@ This generates & installs a customized `tmux.conf`, `nginx.conf`, `.motd`, `.zsh
 
 ## Installation
 
-```shell
+```bash
 yarn install
 sudo node install
 ```

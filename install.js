@@ -1,4 +1,3 @@
-// region import
 const child = require('child_process')
 const fs = require('fs')
 const inquirer = require('inquirer')
@@ -11,7 +10,6 @@ const generateMotd = require('./generate/motd')
 const generateRc = require('./generate/rc')
 const generateTheme = require('./generate/theme')
 const generateTmux = require('./generate/tmux')
-// endregion
 
 // region ssh
 const deviceList = fs
@@ -28,8 +26,8 @@ const deviceList = fs
 			type: 'list',
 			name: 'name',
 			message: 'Which system is this?',
-			choices: deviceList
-		}
+			choices: deviceList,
+		},
 	])
 	const info = require(`${__dirname}/devices/${name}`)
 	// #endregion
@@ -66,8 +64,9 @@ const deviceList = fs
 		generateTheme(info)
 	)
 	child.execSync(
-		`chown ${info.root.user}:${info.root
-			.group} /opt/oh-my-zsh/custom/themes/dodekeract.zsh-theme`
+		`chown ${info.root.user}:${
+			info.root.group
+		} /opt/oh-my-zsh/custom/themes/dodekeract.zsh-theme`
 	)
 	// #endregion
 

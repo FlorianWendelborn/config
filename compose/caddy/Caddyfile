@@ -51,10 +51,6 @@ projects.dodekeract.com/spot-the-difference {
 	git github.com/dodekeract/spot-the-difference
 }
 
-manta.dodekeract.report {
-	redir https://projects.dodekeract.com/manta/
-}
-
 smartfl.at {
 	redir https://github.com/smartflat/smartflat
 }

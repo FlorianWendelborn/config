@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+function s () {
+	COMMAND="$1"
+	"$FW_CONFIG_ROOT/shell/scripts/$COMMAND" ${@:2}
+}
+
+compdef "_files -W \"$FW_CONFIG_ROOT/shell/scripts\"" s

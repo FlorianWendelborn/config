@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+for FILE in *; do
+	[[ "$FILE" == *.hevc.mp4 ]] && continue
+	echo "Converting $FILE"
+
+	ffmpeg \
+		-i "$FILE" \
+		-c:v libx265 \
+		-crf 21 \
+		-c:a aac \
+		-f mp4 \
+		-pix_fmt yuv420p \
+		-tag:v hvc1 \
+		-movflags faststart \
+		"$FILE.hevc.mp4"
+done

@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+printf -v YEAR "%04d" "${1#0}"
+printf -v MONTH "%02d" "${2#0}"
+printf -v DAY "%02d" "${3#0}"
+
+I=0
+while true; do
+	FILE="./$I.jpg"
+	
+	# file does not exist
+	if test ! -f "$FILE"; then exit 0; fi
+
+	INDEX=$(node -p "String(Math.floor($I / 60)).padStart(2, 0) + String($I % 60).padStart(2, 0)")
+
+	TIMESTAMP="$YEAR$MONTH$DAY$INDEX"
+
+	echo "setting $I to $TIMESTAMP"
+
+	# macOS touch bug
+	cp $FILE $FILE.copy
+	rm $FILE
+	mv $FILE.copy $FILE
+
+	# fix image
+	xattr -c $FILE
+	exiftool -all= $FILE
+	rm -f $FILE\_original
+	touch -t$TIMESTAMP $FILE
+
+	# increment
+	I=$((I+1))
+done
+
+echo -e "\a"

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+function probe() {
+	STREAM=$1
+	ENTRIES=$2
+	FORMAT=$3
+	FILE=$4
+
+	ffprobe \
+		-v error \
+		-select_streams "$STREAM" \
+		-show_entries "stream=$ENTRIES" \
+		-of "$FORMAT" \
+		"$FILE"
+}
+
+for FILE in *; do
+	AUDIO=$(probe a:0 codec_name default=noprint_wrappers=1:nokey=1 "$FILE")
+	VIDEO=$(probe v:0 codec_name default=noprint_wrappers=1:nokey=1 "$FILE")
+	RESOLUTION=$(probe v:0 width,height csv=s=x:p=0 "$FILE")
+
+	echo "$VIDEO $AUDIO $RESOLUTION ($FILE)"
+done

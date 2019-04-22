@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+for file in *; do
+	ffmpeg -i "$file" -c:v copy -c:a copy -f mp4 -pix_fmt yuv420p -tag:v hvc1 -movflags faststart "$file.hevc.mp4"
+done

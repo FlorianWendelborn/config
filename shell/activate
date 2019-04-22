@@ -2,6 +2,7 @@
 
 function s () {
 	COMMAND="$1"
+	# shellcheck disable=SC2068
 	"$FW_CONFIG_ROOT/shell/scripts/$COMMAND" ${@:2}
 }
 

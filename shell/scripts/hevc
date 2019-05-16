@@ -2,9 +2,34 @@
 
 set -euo pipefail
 
+function getResolution () {
+	FILE="$1"
+
+	return 
+}
+
 for FILE in *; do
+	# ignore already converted files
 	[[ "$FILE" == *.hevc.mp4 ]] && continue
-	echo "Converting $FILE"
+
+	# detecing maximum bitrate
+	WIDTH=$(
+		ffprobe \
+			-v error \
+			-select_streams v:0 \
+			-show_entries "stream=width" \
+			-of "csv=s=x:p=0" \
+			"$FILE"
+	)
+
+	if (( "$WIDTH" < 2000 )); then
+		BITRATE_OPTIONS="-maxrate 2M -bufsize 4M"
+	else
+		BITRATE_OPTIONS="-maxrate 5M -bufsize 10M"
+	fi
+
+
+	echo "Converting $FILE with $BITRATE_OPTIONS"
 
 	ffmpeg \
 		-i "$FILE" \
@@ -12,8 +37,9 @@ for FILE in *; do
 		-crf 21 \
 		-c:a aac \
 		-f mp4 \
-		-pix_fmt yuv420p \
 		-tag:v hvc1 \
+		-pix_fmt yuv420p \
 		-movflags faststart \
+		$BITRATE_OPTIONS \
 		"$FILE.hevc.mp4"
 done

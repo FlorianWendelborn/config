@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+USERNAME=""
+REPOSITORY=""
+
+function main() {
+	askForUser
+	askForRepository
+	createRepository
+}
+
+function askForUser() {
+	read -p \
+		"Username? (FlorianWendelborn) " \
+		USERNAME
+
+	USERNAME=${USERNAME:-FlorianWendelborn}
+}
+
+function askForRepository() {
+	read -p \
+		"Repository? " \
+		REPOSITORY
+}
+
+function createRepository () {
+	FOLDER="$HOME/Code/@$USERNAME/$REPOSITORY"
+	echo "creating <$FOLDER> folder"
+	mkdir -p "$FOLDER"
+	echo "cloning repository"
+	git clone "git@github.com:$USERNAME/$REPOSITORY" "$FOLDER"
+	gittower "$FOLDER"
+	code "$FOLDER"
+}
+
+main

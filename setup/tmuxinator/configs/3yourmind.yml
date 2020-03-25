@@ -1,0 +1,11 @@
+# /Users/florianwendelborn/.tmuxinator/3yourmind.yml
+
+name: 3yourmind
+root: ~/Code/@3yourmind/monorepo
+
+windows:
+  - mono:
+      layout: main-vertical
+      panes:
+        - ./mono compose down -t 0 && ./mono compose build --parallel && ./mono compose up -d ampi-frontend && ./mono compose logs -f
+        - ctop

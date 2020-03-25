@@ -1,0 +1,12 @@
+# /Users/florianwendelborn/.config/tmuxinator/mocentiv.yml
+
+name: mocentiv
+root: ~/Code/@mocentiv/mvp
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - docker-compose down -t 0 && docker-compose pull && docker-compose build --parallel && docker-compose up -d && docker-compose logs -f
+        - ctop
+        - yarn run storybook

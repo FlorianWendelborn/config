@@ -1,20 +1,16 @@
 version: '3.2'
 services:
   caddy:
-    container_name: caddy
+    build: .
+    environment:
+    - CLOUDFLARE_API_TOKEN=CENSORED
     network_mode: host
-    image: abiosoft/caddy
     restart: unless-stopped
     ports:
-    - "80:80"
-    - "443:443"
+    - 443
+    - 80
     volumes:
-    - type: volume
-      source: /docker/caddy/static
-      target: /srv
-    - type: volume
-      source: /docker/caddy/cache
-      target: /root/.caddy
-    - type: volume
-      source: /docker/caddy/Caddyfile
-      target: /etc/Caddyfile
+    - /docker/caddy/static/:/var/www/:ro,cached
+    - /docker/caddy/caddy.json:/caddy.json:ro,cached
+    - /docker/caddy/data/:/data/
+    - /docker/caddy/config/:/config/

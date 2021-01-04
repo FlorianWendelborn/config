@@ -1,0 +1,20 @@
+version: '3.2'
+services:
+  minecraft:
+    container_name: rlcraft
+    image: doubleem/rlcraft-server 
+    restart: unless-stopped
+    ports:
+    - "25566:25565"
+    volumes:
+    - /docker/rlcraft/world/:/server/world/
+    - /docker/rlcraft/server.properties:/server/server.properties
+    - /docker/rlcraft/ops.json:/server/ops.json
+    - /docker/rlcraft/whitelist.json:/server/whitelist.json
+    - /docker/rlcraft/banned-ips.json:/server/banned-ips.json
+    - ./run-server.sh:/run-server.sh
+    environment:
+    - EULA=true
+    - MEMORY=12G
+    stdin_open: true
+    tty: true

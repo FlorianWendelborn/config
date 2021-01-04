@@ -15,7 +15,8 @@ services:
     - /docker/mail/state:/var/mail-state
     - /docker/mail/logs:/var/log/mail
     - /docker/mail/config:/tmp/docker-mailserver
-    - /docker/ssl/ssl:/tmp/ssl
+    - /docker/caddy/data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/mail.dodekeract.com/mail.dodekeract.com.crt:/etc/letsencrypt/live/mail.dodekeract.com/fullchain.pem
+    - /docker/caddy/data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/mail.dodekeract.com/mail.dodekeract.com.key:/etc/letsencrypt/live/mail.dodekeract.com/privkey.pem
     env_file:
     - .env
     - env-mailserver

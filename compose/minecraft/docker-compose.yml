@@ -7,10 +7,10 @@ services:
     ports:
     - "25565:25565"
     volumes:
-    - type: volume
-      source: /docker/minecraft
-      target: /data
+    - /docker/minecraft:/data
     environment:
     - EULA=true
+    - MEMORY=12G
+    - TYPE=PAPER
     stdin_open: true
     tty: true

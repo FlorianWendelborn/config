@@ -2,13 +2,13 @@ version: '3.2'
 services:
   teamspeak:
     container_name: teamspeak
-    image: linuxserver/gsm-ts3
+    image: teamspeak
     restart: unless-stopped
-    network_mode: host
+    environment:
+      TS3SERVER_LICENSE: accept
     ports:
     - "9987:9987/udp"
     - "30033:30033"
     - "10011:10011"
-    - "41144:41144"
     volumes:
-    - /docker/teamspeak:/config
+    - /docker/teamspeak/:/var/ts3server/
